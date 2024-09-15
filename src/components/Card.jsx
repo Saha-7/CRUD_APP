@@ -17,9 +17,9 @@ const Card = () => {
 
   if (toggle) {
     return (
-      <div className="w-1/2 h-3/4 min-h-max bg-amber-100 shadow-2xl rounded-lg p-2 items-center flex flex-col space-y-10 justify-between">
+      <div className="w-1/2 h-3/4 min-h-max bg-cyan-100 shadow-2xl rounded-lg p-2 items-center flex flex-col space-y-10 justify-between">
         <div className="flex flex-col space-y-10 w-full h-3/4 min-h-max items-center">
-          <h1 className="text-3xl font-semibold underline">My Todo List</h1>
+          <h1 className="text-3xl font-semibold underline">My Task List</h1>
           <div className="w-3/4">
             {toggle ? <AddTodoForm /> : <UpdateTodoForm />}
           </div>
@@ -34,7 +34,7 @@ const Card = () => {
               </ul>
             ) : (
               <div className="w-full flex flex-col items-center space-y-10">
-                <h1 className="text-2xl">Enter your first todo item</h1>
+                <h1 className="text-2xl">Enter your first task</h1>
                 <BsFillCheckCircleFill size={50} className="text-green-500" />
               </div>
             )}
@@ -42,12 +42,12 @@ const Card = () => {
         </div>
         <button
           type="submit"
-          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline"
+          className="bg-blue-800 hover:bg-blue-500 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline"
           onClick={() => {
             dispatch(todosCleared());
           }}
         >
-          Clear
+          Delete All
         </button>
       </div>
     );

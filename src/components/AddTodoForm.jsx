@@ -35,7 +35,7 @@ const AddTodoForm = () => {
             value={input}
             onChange={(e)=> setInput(e.target.value)}
             className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-800 font-semibold leading-tight focus:outline-none focus:shadow-outline bg-white' 
-            placeholder=' Add todo'
+            placeholder=' Add Something'
         />
         <button 
             type="submit"
